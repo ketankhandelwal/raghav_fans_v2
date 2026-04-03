@@ -15,6 +15,7 @@ import ShopByCategorySection from './sections/ShopByCategorySection'
 import QuoteSection from './sections/QuoteSection'
 import MeetTheFam from './sections/MeetTheFam'
 import Testimonials from './sections/Testimonials'
+import CatalogSection from './sections/CatalogSection'
 import StudioSection from './sections/StudioSection'
 import NuukInsiders from './sections/NuukInsiders'
 
@@ -31,6 +32,7 @@ function App() {
       <SeasonSection />
       <FullWidthBanner />
       <ShopByCategorySection />
+      <CatalogSection />
       <QuoteSection />
       <MeetTheFam />
       <Testimonials />

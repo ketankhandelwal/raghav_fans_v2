@@ -5,7 +5,13 @@ import './Navbar.css'
 function Navbar() {
   return (
     <nav className="navbar">
-      <a href="#" className="navbar__logo">RAGHAV FANS</a>
+      <a href="#" className="navbar__logo" aria-label="Raghav Fans">
+        <img
+          src="https://raghav-fans.s3.ap-southeast-1.amazonaws.com/logo/logo_without_categories.png"
+          alt="Raghav Fans"
+          className="navbar__logo-img"
+        />
+      </a>
       <div className="navbar__nav">
         <a href="#shop" className="navbar__nav-link navbar__nav-link--active" id="nav-shop">SHOP</a>
         <a href="#gifting" className="navbar__nav-link" id="nav-gifting">CORPORATE GIFTING</a>
