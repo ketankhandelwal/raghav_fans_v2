@@ -183,28 +183,82 @@ export const FAM_TABS_DATA = [
 export const CATEGORIES = [
   {
     id: 1,
-    name: 'Fans',
+    name: 'Ceiling Fans',
     count: 7,
-    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=600&q=80',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/POLO+BROWN.jpg',
   },
   {
     id: 2,
-    name: 'Kitchen\nEssentials',
+    name: 'Pedestal Fans',
     count: 4,
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEDESTAL+FANS/THUNDER.png',
   },
   {
     id: 3,
-    name: 'Vacuum\nCleaners',
+    name: 'Exhaust Fans',
     count: 3,
-    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600&q=80',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/VENTI.png',
   },
   {
     id: 4,
-    name: 'Garment\nCare',
+    name: 'Heaters',
     count: 3,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/SUMO+FLAME.png',
   },
+
+    {
+    id: 5,
+    name: 'Mixer',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/MAGIC+2.png',
+  },
+
+    {
+    id: 4,
+    name: 'Iron Press',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/BOLT.png',
+  },
+    {
+    id: 4,
+    name: 'Gas Gyser',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/WARMER+GAS+GEYSER.png',
+  },
+    {
+    id: 4,
+    name: 'Switches',
+    count: 3,
+    image: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/FORTUNE.png",
+  },
+    {
+    id: 4,
+    name: 'Socket',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/16A.SOCKET+WITH+SHUTTER.png',
+  },
+    {
+    id: 4,
+    name: 'Series',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/LEATHER.png',
+  },
+    {
+    id: 4,
+    name: 'USB & TV SOCKETS',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/image+(1).png',
+  },
+  {
+    id: 4,
+    name: 'Coolers',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/6.1.png',
+  }
+
+
+
+    
 ]
 
 export const FAM_TABS = ['Fans', 'Kitchen Essentials', 'Vacuum Cleaners', 'Garment Care', 'Heaters']
