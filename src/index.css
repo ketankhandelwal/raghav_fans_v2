@@ -1,0 +1,39 @@
+:root {
+  --red: #e8192c;
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --gray-text: #666666;
+  --light-bg: #f8f8f8;
+  --border: #eeeeee;
+  --font-main: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}

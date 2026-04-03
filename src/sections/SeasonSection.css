@@ -1,0 +1,57 @@
+.season-section {
+  padding: 28px 24px 48px;
+  background: #fff;
+}
+
+.section-label {
+  font-size: 42px;
+  font-weight: 900;
+  color: #111;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+  text-transform: lowercase;
+}
+
+.product-scroll-wrapper {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding: 0 40px 48px;
+  margin: 0 -40px;
+  scroll-behavior: smooth;
+  /* Hide scrollbar on Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f0f0f0;
+  /* Smooth scroll on touch */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar styling for Chrome/Safari */
+.product-scroll-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.product-scroll-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 2px;
+}
+
+.product-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
+.product-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Responsive: on small screens, allow full-width single card */
+@media (max-width: 480px) {
+  .season-section {
+    padding: 20px 16px 36px;
+  }
+
+  .section-label {
+    font-size: 24px;
+  }
+}

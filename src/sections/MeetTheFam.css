@@ -1,0 +1,152 @@
+.meet-fam-section {
+  background: var(--red); /* Top background */
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 0;
+  min-height: 850px;
+}
+
+/* The black bottom part */
+.meet-fam-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: #000;
+  z-index: 1;
+}
+
+.meet-fam-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  padding-left: 60px;
+}
+
+.meet-fam-left {
+  flex: 1;
+  position: relative;
+  z-index: 5;
+  padding-right: 40px;
+}
+
+.meet-fam-headline {
+  font-size: 84px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 40px;
+}
+
+.meet-fam-headline .highlight {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+.meet-fam-tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.fam-tab-v2 {
+  font-size: 11px;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.fam-tab-v2.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Large product cutouts */
+.meet-fam-visuals {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.hero-cutout {
+  width: 25%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.hero-cutout:hover {
+  transform: translateY(-10px);
+}
+
+/* Sidebar Scroll Section */
+.meet-fam-sidebar {
+  width: 360px;
+  background: #fff;
+  height: 750px;
+  border-radius: 16px 0 0 16px;
+  padding: 24px;
+  box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 20;
+  margin-right: 0;
+}
+
+.sidebar-scroll-wrapper {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-right: 18px; /* For scrollbar space */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.sidebar-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+@media (max-width: 1200px) {
+  .meet-fam-section { padding-top: 40px; }
+  .meet-fam-headline { font-size: 60px; }
+  .meet-fam-sidebar { width: 320px; height: 600px; }
+}
+
+.anim-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.no-products {
+  padding: 40px;
+  text-align: center;
+  color: #888;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.fam-tab-v2:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.1);
+}
+
+.fam-tab-v2.active:hover {
+  background: #000;
+}
+

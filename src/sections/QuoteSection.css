@@ -1,0 +1,27 @@
+/* ---- QUOTE SECTION ---- */
+.quote-section {
+  padding: 80px 40px;
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.quote-section__text {
+  font-size: clamp(18px, 2.8vw, 30px);
+  font-weight: 800;
+  color: var(--black);
+  line-height: 1.5;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.quote-section__editors {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-text);
+  letter-spacing: 0.06em;
+  margin-top: 48px;
+}
+
+@media (max-width: 768px) {
+  .quote-section { padding: 50px 20px; }
+}

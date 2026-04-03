@@ -1,0 +1,38 @@
+/* ---- FLOATING BTNS ---- */
+.floating-btns {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.float-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+.float-btn--video {
+  background: #1a1a1a;
+  color: white;
+  font-size: 18px;
+}
+
+.float-btn--whatsapp {
+  background: #25d366;
+  color: white;
+  font-size: 20px;
+}

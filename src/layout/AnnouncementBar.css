@@ -1,0 +1,36 @@
+/* ---- ANNOUNCEMENT BAR ---- */
+.announcement-bar {
+  background: var(--red);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.announcement-bar__track {
+  display: inline-flex;
+  animation: ticker 28s linear infinite;
+}
+
+.announcement-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 60px;
+}
+
+.announcement-bar__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--white);
+  flex-shrink: 0;
+}
+
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

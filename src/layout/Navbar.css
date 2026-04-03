@@ -1,0 +1,86 @@
+/* ---- NAVBAR ---- */
+.navbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  padding: 0 40px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--red);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar__nav-link {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: var(--black);
+  transition: background 0.2s;
+}
+
+.navbar__nav-link:hover {
+  background: var(--light-bg);
+}
+
+.navbar__nav-link--active {
+  background: var(--black);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+
+.navbar__nav-link--active:hover {
+  background: #333;
+}
+
+.navbar__icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.navbar__icon-btn:hover {
+  background: var(--light-bg);
+}
+
+.navbar__icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 0 20px; height: 60px; }
+  .navbar__nav { display: none; }
+}

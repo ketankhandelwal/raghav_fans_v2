@@ -1,0 +1,170 @@
+.insiders-section {
+  background: #fff;
+  padding: 100px 60px;
+  overflow: hidden;
+}
+
+.insiders-container {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+/* Left Column Styling */
+.insiders-text-col {
+  flex: 0 0 35%;
+}
+
+.insiders-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.insiders-pre {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+}
+
+.insiders-RAGHAV FANS {
+  font-size: 72px;
+  font-weight: 900;
+  color: #e52222;
+  line-height: 1;
+  margin: 4px 0;
+}
+
+.insiders-pill {
+  background: #e52222;
+  border-radius: 12px;
+  padding: 6px 20px;
+  margin: 5px 0 24px;
+  display: inline-block;
+}
+
+.insiders-main {
+  font-size: 72px;
+  font-weight: 950;
+  color: #111;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+
+.insiders-tagline {
+  font-size: 18px;
+  font-weight: 800;
+  color: #333;
+}
+
+/* Right Column (The Staggered Grid) */
+.insiders-visual-col {
+  flex: 1;
+}
+
+.insiders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 16px;
+  padding-right: 20px;
+}
+
+.insiders-item {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.insiders-item:hover {
+  transform: scale(1.03);
+  z-index: 5;
+}
+
+.insiders-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Specific item heights for staggered effect */
+.item-1 {
+  grid-row: span 2;
+}
+
+.item-2 {
+  grid-row: span 1;
+}
+
+.item-3 {
+  grid-row: span 2;
+}
+
+.item-4 {
+  grid-row: span 2;
+}
+
+.item-5 {
+  grid-row: span 3;
+}
+
+.item-6 {
+  grid-row: span 1;
+}
+
+.item-7 {
+  grid-row: span 2;
+}
+
+.item-8 {
+  grid-row: span 1;
+}
+
+.item-9 {
+  grid-row: span 1;
+}
+
+@media (max-width: 1100px) {
+  .insiders-container {
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .insiders-text-col {
+    flex: 0 0 100%;
+  }
+
+  .insiders-header {
+    align-items: center;
+  }
+
+  .insiders-pre {
+    font-size: 32px;
+  }
+
+  .insiders-RAGHAV FANS,
+  .insiders-main {
+    font-size: 48px;
+  }
+
+  .insiders-pill {
+    padding: 6px 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .insiders-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item-5 {
+    grid-row: span 2;
+  }
+}
