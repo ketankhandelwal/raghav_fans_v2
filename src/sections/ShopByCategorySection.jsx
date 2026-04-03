@@ -9,7 +9,7 @@ function ShopByCategorySection() {
       <div className="category-grid">
         {CATEGORIES.map((cat) => (
           <div className="category-card" key={cat.id} id={`category-${cat.id}`}>
-            <div className="category-card__name">{cat.name.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}</div>
+            <h3 className="category-card__name">{cat.name}</h3>
             <div className="category-card__count"><span>{cat.count}</span> Products</div>
             <img className="category-card__image" src={cat.image} alt={cat.name} />
           </div>
