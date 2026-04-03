@@ -49,18 +49,25 @@
 
 .meet-fam-tabs {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-bottom: 60px;
+  position: relative;
+  z-index: 100; /* Ensure tabs are on top of floor visuals */
 }
 
 .fam-tab-v2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 11px;
   font-weight: 800;
   color: #000;
   letter-spacing: 0.5px;
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  border: 1.5px solid #000;
+  background: transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .fam-tab-v2.active {
@@ -68,54 +75,84 @@
   color: #fff;
 }
 
-/* Large product cutouts */
+/* Large product cutouts - Horizontal Scroll at bottom */
 .meet-fam-visuals {
   display: flex;
   align-items: flex-end;
-  gap: 20px;
+  gap: 30px;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 380px); /* Leave room for sidebar */
+  height: 400px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 60px 40px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Hide scrollbar Firefox */
   z-index: 10;
+  pointer-events: auto;
+}
+
+.meet-fam-visuals::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
 }
 
 .hero-cutout {
-  width: 25%;
-  height: auto;
+  flex: 0 0 auto; /* Stop shrinking in flex container */
+  height: 90%;
+  width: auto;
+  min-width: 300px;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
+
 .hero-cutout:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px) scale(1.05);
 }
 
 /* Sidebar Scroll Section */
 .meet-fam-sidebar {
-  width: 360px;
+  width: 380px;
   background: #fff;
-  height: 750px;
+  height: 720px;
   border-radius: 16px 0 0 16px;
-  padding: 24px;
-  box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+  padding: 32px 24px;
+  box-shadow: -20px 0 60px rgba(0,0,0,0.15);
   position: relative;
-  z-index: 20;
+  z-index: 101;
   margin-right: 0;
 }
+
 
 .sidebar-scroll-wrapper {
   height: 100%;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding-right: 18px; /* For scrollbar space */
-  scrollbar-width: none; /* Hide scrollbar Firefox */
+  gap: 32px;
+  padding-right: 12px;
+  scroll-behavior: smooth;
 }
 
 .sidebar-scroll-wrapper::-webkit-scrollbar {
-  display: none; /* Hide scrollbar Chrome/Safari */
+  width: 4px;
+}
+
+.sidebar-scroll-wrapper::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.sidebar-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.sidebar-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #e52222;
 }
 
 @media (max-width: 1200px) {
@@ -141,12 +178,36 @@
   font-size: 14px;
 }
 
-.fam-tab-v2:hover {
-  cursor: pointer;
-  background: rgba(0,0,0,0.1);
+.sidebar-hero-item {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease;
 }
 
-.fam-tab-v2.active:hover {
-  background: #000;
+.sidebar-hero-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.sidebar-hero-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #fdfdfd;
+  border-radius: 8px;
+}
+
+.sidebar-hero-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-left: 4px;
 }
 

@@ -1,27 +1,36 @@
-/* ---- QUOTE SECTION ---- */
 .quote-section {
-  padding: 80px 40px;
-  background: var(--light-bg);
+  padding: 100px 40px;
+  background: #f8f8f6;
   text-align: center;
 }
 
 .quote-section__text {
-  font-size: clamp(18px, 2.8vw, 30px);
-  font-weight: 800;
-  color: var(--black);
-  line-height: 1.5;
-  max-width: 860px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 920;
+  color: #111;
+  line-height: 1.25;
+  max-width: 900px;
   margin: 0 auto;
+  letter-spacing: -1.5px;
 }
 
 .quote-section__editors {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  color: var(--gray-text);
-  letter-spacing: 0.06em;
-  margin-top: 48px;
+  font-weight: 800;
+  color: #888;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  .quote-section { padding: 50px 20px; }
+@media (max-width: 900px) {
+  .quote-section__text { font-size: 26px; }
 }
+
+@media (max-width: 600px) {
+  .quote-section { padding: 60px 20px; }
+  .quote-section__text { font-size: 22px; }
+}
+

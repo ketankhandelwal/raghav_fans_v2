@@ -4,7 +4,7 @@
 export const PRODUCTS = [
   {
     id: 1,
-    category: 'CEILING FANS',
+    category: 'FANS',
     name: 'BUGATTI BLUE',
     subtitle: 'Premium Ceiling Fan',
     tagline: 'High-speed performance with elegant blue finish.',
@@ -20,7 +20,7 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    category: 'HEATER',
+    category: 'HOME APPLIANCES',
     name: 'HALCYON',
     subtitle: 'Room Heater',
     tagline: 'Compact design with fast heating and safety protection.',
@@ -52,7 +52,7 @@ export const PRODUCTS = [
   },
   {
     id: 4,
-    category: 'TABLE FANS',
+    category: 'FANS',
     name: 'FARMER',
     subtitle: 'Rechargeable Table Fan',
     tagline: 'Up to 17 hrs runtime with remote control & silent operation.',
@@ -68,7 +68,7 @@ export const PRODUCTS = [
   },
   {
     id: 5,
-    category: 'AURIC',
+    category: 'HOME APPLIANCES',
     name: 'AURIC',
     subtitle: 'Cordless Vacuum Cleaner',
     tagline: '34kPa powerful suction with flexible stick design.',
@@ -84,7 +84,7 @@ export const PRODUCTS = [
   },
   {
     id: 6,
-    category: 'AIR COOLERS',
+    category: 'COOLERS',
     name: 'COOLERS',
     subtitle: 'High Capacity Air Cooler',
     tagline: 'Powerful airflow with large water tank for long cooling.',
@@ -100,7 +100,7 @@ export const PRODUCTS = [
   },
   {
     id: 7,
-    category: 'PEGASUS',
+    category: 'SWITCHES & SOCKETS',
     name: 'SOFTY',
     subtitle: 'High-Speed Pedestal Fan',
     tagline: 'Adjustable height with strong air delivery.',
@@ -134,51 +134,67 @@ export const PRODUCTS = [
 
 export const FAM_TABS_DATA = [
   {
-    category: 'Fans',
+    category: 'FANS',
     heroes: [
-      'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=600&q=80',
-      'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80',
-      'https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=600&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/PILOT+SB.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/PILOT+BLUE.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/VENTI.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/FRESH+AIR.png',
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEDESTAL+FANS/AMPHAN.png",
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEDESTAL+FANS/CYCLONE.png"
     ]
   },
   {
-    category: 'Kitchen Essentials',
+    category: 'HOME APPLIANCES',
     heroes: [
-      'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=600&q=80',
-      'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80',
-      'https://images.unsplash.com/photo-1556911220-e15224bbaf47?w=600&q=80',
-      'https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?w=600&q=80',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/004.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/11.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/HALCYON.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/immersion+cu..png',
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/SUMO+STRONG+PLUS.png",
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/AMAZE+MG.png",
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/AMAZER+GAS.png",
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/VIVO.png",
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/WARMER+GAS+GEYSER.png"
     ]
   },
   {
-    category: 'Vacuum Cleaners',
+    category: 'SERIES',
     heroes: [
-      'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600&q=80',
-      'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=600&q=80',
-      'https://images.unsplash.com/photo-1563318991-64e7c3761dfa?w=600&q=80',
-      'https://images.unsplash.com/photo-1509147814763-d47a0abcad49?w=600&q=80',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/1.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/2.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/BLACK+SILVER.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/BLACK.png',
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/LEATHER.png",
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/WHITE+BLACK.png",
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/WHITE+SILVER.png"
     ]
   },
   {
-    category: 'Garment Care',
+    category: 'COOLERS',
     heroes: [
-      'https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?w=600&q=80',
-      'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=600&q=80',
-      'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=600&q=80',
-      'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/1.1.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/2.png',
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/3.png",
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/4.png',
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/6.png",
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/7.1.png"
     ]
   },
   {
-    category: 'Heaters',
+    category: 'SWITCHES & SOCKETS',
     heroes: [
-      'https://images.unsplash.com/photo-1626245970176-02e088d8b672?w=600&q=80',
-      'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?w=600&q=80',
-      'https://images.unsplash.com/photo-1521334885634-954770305845?w=600&q=80',
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&q=80',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AURIC/475A0724.png',
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AURIC/475A0726.png',
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AURIC/16A.+SOCKET+WITH+SHUTTER.png",
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AURIC/475A0732.png',
+      "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AURIC/16A.+SOCKET+WITHOUT+SHUTTER.png",
+      'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AURIC/13A.+INTERNATIONAL+SOCKET.png',
     ]
   }
 ]
+
+export const FAM_TABS = ['FANS', 'HOME APPLIANCES', 'SERIES', 'COOLERS', 'SWITCHES & SOCKETS']
 
 export const CATEGORIES = [
   {
@@ -205,81 +221,72 @@ export const CATEGORIES = [
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/SUMO+FLAME.png',
   },
-
-    {
+  {
     id: 5,
     name: 'Mixer',
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/MAGIC+2.png',
   },
-
-    {
-    id: 4,
+  {
+    id: 6,
     name: 'Iron Press',
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/BOLT.png',
   },
-    {
-    id: 4,
+  {
+    id: 7,
     name: 'Gas Gyser',
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/WARMER+GAS+GEYSER.png',
   },
-    {
-    id: 4,
+  {
+    id: 8,
     name: 'Switches',
     count: 3,
     image: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/FORTUNE.png",
   },
-    {
-    id: 4,
+  {
+    id: 9,
     name: 'Socket',
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/16A.SOCKET+WITH+SHUTTER.png',
   },
-    {
-    id: 4,
+  {
+    id: 10,
     name: 'Series',
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/LEATHER.png',
   },
-    {
-    id: 4,
+  {
+    id: 11,
     name: 'USB & TV SOCKETS',
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/image+(1).png',
   },
   {
-    id: 4,
+    id: 12,
     name: 'Coolers',
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/6.1.png',
   }
-
-
-
-    
 ]
 
-export const FAM_TABS = ['Fans', 'Kitchen Essentials', 'Vacuum Cleaners', 'Garment Care', 'Heaters']
-
 export const IMAGE_BANNERS = [
-  /* Keep existing banners or update images if needed */
   {
     id: 1,
-    brand: 'HAVELLS',
+    brand: 'RAGHAV FANS',
     headline: 'Touching every aspect of your Home Life.',
-    sub: 'Innovative range of Electrical products and Home appliances from Havells.',
+    sub: 'Innovative range of Electrical products and Home appliances from RAGHAV FANS.',
     bg: '#c0111f',
     textColor: '#fff',
     large: true,
-    logo: 'H',
+    logo: 'R',
     image: 'https://havells.com/media/wysiwyg/700x700_Pixel_1.jpg',
   },
   {
     id: 2,
-    brand: 'LLOYD',
-    headline: '— A HAVELLS Brand —',
+    brand: 'RAGHAV',
+    headline: '— A RAGHAV Brand —',
     sub: '',
     bg: '#1a2f5e',
     textColor: '#fff',
@@ -288,8 +295,8 @@ export const IMAGE_BANNERS = [
   },
   {
     id: 3,
-    brand: 'HAVELLS',
-    headline: 'Feel Beyond',
+    brand: 'RAGHAV',
+    headline: 'Expert Quality',
     sub: '',
     bg: '#f5c842',
     textColor: '#1a1a1a',
@@ -298,8 +305,8 @@ export const IMAGE_BANNERS = [
   },
   {
     id: 4,
-    brand: 'HAVELLS Crabtree',
-    headline: 'Har Pal Ke Live Switch',
+    brand: 'RAGHAV Switches',
+    headline: 'Smart Life Switches',
     sub: '',
     bg: '#1a2f5e',
     textColor: '#fff',
@@ -309,7 +316,7 @@ export const IMAGE_BANNERS = [
   {
     id: 5,
     brand: 'REO',
-    headline: 'Trust Naam Mein. Perfect Kaam Mein.',
+    headline: 'Trust in Quality.',
     sub: '',
     bg: '#e8f5e9',
     textColor: '#1a1a1a',

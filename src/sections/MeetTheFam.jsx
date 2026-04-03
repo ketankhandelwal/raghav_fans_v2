@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard'
 import './MeetTheFam.css'
 
 function MeetTheFam() {
-  const [activeCategory, setActiveCategory] = useState('Fans')
+  const [activeCategory, setActiveCategory] = useState(FAM_TABS[0])
 
   // Filter products for the sidebar
   const filteredProducts = PRODUCTS.filter(p => p.category === activeCategory)
@@ -49,12 +49,27 @@ function MeetTheFam() {
         {/* Right Side: Vertical Scroll Section */}
         <div className="meet-fam-sidebar">
           <div className="sidebar-scroll-wrapper">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((p) => (
-                <ProductCard key={`${activeCategory}-${p.id}`} product={p} />
+            {activeHeroes.length > 0 ? (
+              activeHeroes.map((hero, idx) => (
+                <ProductCard 
+                  key={`${activeCategory}-hero-card-${idx}`} 
+                  product={{
+                    id: `hero-${idx}-${activeCategory}`,
+                    name: `${activeCategory} Special Edition`,
+                    subtitle: "Limited Premium Design",
+                    tagline: "Experience the pinnacle of RAGHAV FANS craftsmanship.",
+                    image: hero,
+                    badges: ['new'],
+                    rating: '4.9',
+                    ratingCount: '12',
+                    colors: ['#111', '#eee'],
+                    price: 'On Request',
+                    emi: null
+                  }} 
+                />
               ))
             ) : (
-              <div className="no-products">More {activeCategory} coming soon!</div>
+              <div className="no-products">Discovery items coming soon!</div>
             )}
           </div>
         </div>
