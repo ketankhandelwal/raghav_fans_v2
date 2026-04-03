@@ -1,0 +1,113 @@
+.shop-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 40px 0;
+  animation: slideDropdown 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@keyframes slideDropdown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shop-dropdown__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Sub-Nav Styles */
+.sub-nav-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 24px;
+}
+
+.sub-nav-link {
+  font-size: 11px;
+  font-weight: 850;
+  color: #111;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  border-radius: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sub-nav-link.active {
+  background: #111;
+  color: #fff;
+}
+
+.sub-nav-link:hover:not(.active) {
+  background: #f5f5f5;
+}
+
+/* Product Grid inside Dropdown */
+.sub-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sub-product-card {
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.sub-product-title {
+  font-size: 18px;
+  font-weight: 950;
+  color: #111;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.sub-product-img-wrap {
+  width: 100%;
+  height: 200px;
+  background: #fdfdfd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.sub-product-img-wrap img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.sub-product-card--view-all .sub-product-title {
+  color: #111;
+}
+
+.sub-product-card--view-all .sub-product-img-wrap {
+  background: transparent;
+}
+
+@media (max-width: 1024px) {
+  .sub-product-grid { grid-template-columns: repeat(3, 1fr); }
+  .sub-product-card:nth-child(4) { display: none; }
+}
+
+@media (max-width: 600px) {
+  .sub-nav-row { overflow-x: auto; justify-content: flex-start; padding-bottom: 12px; }
+  .sub-product-grid { grid-template-columns: 1fr; }
+  .sub-product-img-wrap { height: 160px; }
+}
