@@ -1,9 +1,10 @@
 .meet-fam-section {
-  background: var(--red); /* Top background */
+  background: var(--red);
+  /* Top background */
   position: relative;
   overflow: hidden;
   padding: 64px 0 0;
-  min-height: 850px;
+  height: 860px;
 }
 
 /* The black bottom part */
@@ -13,9 +14,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20%;
+  height: 160px;
   background: #000;
-  z-index: 1;
+  z-index: 0;
 }
 
 .meet-fam-container {
@@ -24,6 +25,8 @@
   display: flex;
   height: 100%;
   padding-left: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .meet-fam-left {
@@ -31,6 +34,7 @@
   position: relative;
   z-index: 5;
   padding-right: 40px;
+  height: 100%;
 }
 
 .meet-fam-headline {
@@ -53,7 +57,8 @@
   gap: 16px;
   margin-bottom: 60px;
   position: relative;
-  z-index: 100; /* Ensure tabs are on top of floor visuals */
+  z-index: 100;
+  /* Ensure tabs are on top of floor visuals */
 }
 
 .fam-tab-v2 {
@@ -70,9 +75,23 @@
   cursor: pointer;
 }
 
+.fam-tab-v2:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  border-radius: 6px;
+}
+
 .fam-tab-v2.active {
   background: #000;
   color: #fff;
+  border-color: #000;
+}
+
+.fam-tab-v2.active:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
 }
 
 /* Large product cutouts - Horizontal Scroll at bottom */
@@ -83,27 +102,39 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: calc(100% - 380px); /* Leave room for sidebar */
-  height: 400px;
+  width: calc(100% - 380px);
+  /* Leave room for sidebar */
+  height: 480px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0 60px 40px;
+  padding: 0 60px 16px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Hide scrollbar Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
   z-index: 10;
   pointer-events: auto;
 }
 
 .meet-fam-visuals::-webkit-scrollbar {
-  display: none; /* Hide scrollbar Chrome/Safari */
+  height: 4px;
+}
+
+.meet-fam-visuals::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.meet-fam-visuals::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
 }
 
 .hero-cutout {
-  flex: 0 0 auto; /* Stop shrinking in flex container */
-  height: 90%;
+  flex: 0 0 auto;
+  height: 65%;
   width: auto;
-  min-width: 300px;
+  min-width: 220px;
+  max-width: 260px;
   object-fit: contain;
   transition: transform 0.4s ease;
 }
@@ -120,7 +151,7 @@
   height: 720px;
   border-radius: 16px 0 0 16px;
   padding: 32px 24px;
-  box-shadow: -20px 0 60px rgba(0,0,0,0.15);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 101;
   margin-right: 0;
@@ -156,9 +187,18 @@
 }
 
 @media (max-width: 1200px) {
-  .meet-fam-section { padding-top: 40px; }
-  .meet-fam-headline { font-size: 60px; }
-  .meet-fam-sidebar { width: 320px; height: 600px; }
+  .meet-fam-section {
+    padding-top: 40px;
+  }
+
+  .meet-fam-headline {
+    font-size: 60px;
+  }
+
+  .meet-fam-sidebar {
+    width: 320px;
+    height: 600px;
+  }
 }
 
 .anim-fade-in {
@@ -166,8 +206,15 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .no-products {
@@ -191,7 +238,7 @@
 
 .sidebar-hero-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar-hero-img {
@@ -210,4 +257,3 @@
   letter-spacing: 0.5px;
   padding-left: 4px;
 }
-

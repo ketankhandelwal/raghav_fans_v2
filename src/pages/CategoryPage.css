@@ -1,0 +1,95 @@
+.cat-page {
+  min-height: 100vh;
+  background: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.cat-page__body {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 40px 80px;
+}
+
+/* Header */
+.cat-page__header {
+  margin-bottom: 32px;
+}
+
+.cat-page__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.cat-page__breadcrumb button {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.cat-page__breadcrumb button:hover {
+  color: #111;
+}
+
+.cat-page__title {
+  font-size: 40px;
+  font-weight: 900;
+  color: #111;
+  letter-spacing: -1px;
+  margin: 0 0 6px;
+}
+
+.cat-page__count {
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+
+/* Search */
+.cat-page__search-wrap {
+  margin-bottom: 40px;
+}
+
+.cat-page__search {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cat-page__search:focus {
+  border-color: #111;
+}
+
+/* Grid — flexible wrap matching ProductCard's 280px fixed width */
+.cat-page__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 32px;
+}
+
+@media (max-width: 800px) {
+  .cat-page__body { padding: 80px 20px 60px; }
+}
+
+/* Empty state */
+.cat-page__empty {
+  text-align: center;
+  padding: 80px 0;
+  font-size: 16px;
+  color: #888;
+  font-weight: 500;
+}

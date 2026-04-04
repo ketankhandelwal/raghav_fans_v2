@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { SearchIcon, UserIcon, CartIcon } from '../components/Icons'
 import ShopDropdown from './ShopDropdown'
 import './Navbar.css'
 
 function Navbar() {
   const [isShopOpen, setIsShopOpen] = useState(false)
+  const navigate  = useNavigate()
+  const location  = useLocation()
+  const onContact = location.pathname === '/contact'
 
   return (
     <nav className="navbar" onMouseLeave={() => setIsShopOpen(false)}>
@@ -27,6 +31,12 @@ function Navbar() {
         <a href="#support" className="navbar__nav-link" id="nav-support">SUPPORT HUB</a>
         <a href="#store" className="navbar__nav-link" id="nav-store">FIND A STORE</a>
         <a href="#recipes" className="navbar__nav-link" id="nav-recipes">BROWSE RECIPES</a>
+        <button
+          className={`navbar__nav-btn navbar__nav-btn--contact ${onContact ? 'active' : ''}`}
+          onClick={() => navigate('/contact')}
+        >
+          CONTACT US
+        </button>
       </div>
       <div className="navbar__icons">
         <button className="navbar__icon-btn" id="btn-search" aria-label="Search"><SearchIcon /></button>
@@ -34,7 +44,7 @@ function Navbar() {
         <button className="navbar__icon-btn" id="btn-cart" aria-label="Cart"><CartIcon /></button>
       </div>
 
-      {isShopOpen && <ShopDropdown />}
+      {isShopOpen && <ShopDropdown onClose={() => setIsShopOpen(false)} />}
     </nav>
   )
 }

@@ -53,7 +53,7 @@ function ProductCard({ product }) {
           <div className="product-card__price">{product.price}</div>
         </div>
         <button className="product-card__add-btn" id={`add-to-cart-${product.id}`}>
-          Add to Cart
+          ENQUIRE NOW
         </button>
       </div>
 

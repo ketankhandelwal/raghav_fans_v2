@@ -281,7 +281,7 @@ export const IMAGE_BANNERS = [
     textColor: '#fff',
     large: true,
     logo: 'R',
-    image: 'https://havells.com/media/wysiwyg/700x700_Pixel_1.jpg',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_ulgzpqulgzpqulgz.png',
   },
   {
     id: 2,
@@ -291,7 +291,7 @@ export const IMAGE_BANNERS = [
     bg: '#1a2f5e',
     textColor: '#fff',
     large: false,
-    image: 'https://havells.com/media/wysiwyg/700x700_Pixel_1.jpg',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_2d11uy2d11uy2d11.png',
   },
   {
     id: 3,
@@ -301,7 +301,7 @@ export const IMAGE_BANNERS = [
     bg: '#f5c842',
     textColor: '#1a1a1a',
     large: false,
-    image: 'https://havells.com/media/wysiwyg/700x700_Pixel_1.jpg',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_bpg841bpg841bpg8.png',
   },
   {
     id: 4,
@@ -311,7 +311,7 @@ export const IMAGE_BANNERS = [
     bg: '#1a2f5e',
     textColor: '#fff',
     large: false,
-    image: 'https://havells.com/media/wysiwyg/700x700_Pixel_1.jpg',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/heater_fmaily.png',
   },
   {
     id: 5,
@@ -321,7 +321,7 @@ export const IMAGE_BANNERS = [
     bg: '#e8f5e9',
     textColor: '#1a1a1a',
     large: false,
-    image: 'https://havells.com/media/wysiwyg/700x700_Pixel_1.jpg',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/har_pal_switch.png',
   },
 ]
 

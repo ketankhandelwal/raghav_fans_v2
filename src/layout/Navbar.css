@@ -54,6 +54,21 @@
   color: #fff;
 }
 
+.navbar__nav-btn--contact {
+  background: var(--red);
+  color: #fff;
+  border-radius: 40px;
+}
+
+.navbar__nav-btn--contact:hover {
+  background: #c0101f;
+}
+
+.navbar__nav-btn--contact.active {
+  background: #0a0a0a;
+  color: #fff;
+}
+
 
 .navbar__icons {
   display: flex;
