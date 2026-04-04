@@ -21,16 +21,18 @@ function Navbar() {
       </a>
       <div className="navbar__nav">
         <button 
+          className={`navbar__nav-btn ${location.pathname === '/' ? 'active' : ''}`} 
+          onClick={() => navigate('/')}
+        >
+          HOME
+        </button>
+        <button 
           className={`navbar__nav-btn ${isShopOpen ? 'active' : ''}`} 
           onClick={() => setIsShopOpen(!isShopOpen)}
           onMouseEnter={() => setIsShopOpen(true)}
         >
           SHOP
         </button>
-        <a href="#gifting" className="navbar__nav-link" id="nav-gifting">CORPORATE GIFTING</a>
-        <a href="#support" className="navbar__nav-link" id="nav-support">SUPPORT HUB</a>
-        <a href="#store" className="navbar__nav-link" id="nav-store">FIND A STORE</a>
-        <a href="#recipes" className="navbar__nav-link" id="nav-recipes">BROWSE RECIPES</a>
         <button
           className={`navbar__nav-btn navbar__nav-btn--contact ${onContact ? 'active' : ''}`}
           onClick={() => navigate('/contact')}
