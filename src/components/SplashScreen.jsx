@@ -229,7 +229,7 @@ export default function SplashScreen({ onDone }) {
     const iv = setInterval(() => {
       idx = (idx + 1) % LABELS.length
       setCycleIdx(idx)
-    }, 620)
+    }, 1000)
 
     /* ── GSAP master timeline ── */
     const tl = gsap.timeline()
@@ -280,12 +280,12 @@ export default function SplashScreen({ onDone }) {
     /* counter */
     const counter = { val: 0 }
     tl.to(counter, {
-      val: 100, duration: 1.6, ease: 'power1.inOut',
+      val: 100, duration: 4.5, ease: 'power1.inOut',
       onUpdate() { setPct(Math.round(counter.val)) },
     }, 1.5)
 
     /* hold */
-    tl.to({}, { duration: 0.5 })
+    tl.to({}, { duration: 1.5 })
 
     /* ── EXIT ── */
     tl.to('.splash-tagline, .splash-since, .splash-corner, .splash-pct, .splash-progress-track, .splash-divider, .splash-cycle-wrap', {

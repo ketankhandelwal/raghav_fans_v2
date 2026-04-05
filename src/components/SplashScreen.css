@@ -40,7 +40,7 @@
   font-size: 9px;
   font-weight: 900;
   letter-spacing: 2.5px;
-  color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   text-transform: uppercase;
   pointer-events: none;
 }
@@ -78,9 +78,10 @@
 }
 
 .splash-word--raghav {
-  font-size: clamp(68px, 13vw, 148px);
-  font-weight: 950;
-  letter-spacing: -4px;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(80px, 15vw, 180px);
+  font-weight: 700;
+  letter-spacing: 4px;
   color: #ffffff;
 }
 
@@ -125,9 +126,10 @@
 
 .splash-cycle-item {
   position: absolute;
-  font-size: clamp(36px, 6.5vw, 76px);
-  font-weight: 950;
-  letter-spacing: -2px;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 700;
+  letter-spacing: 2px;
   color: #ffffff;
   line-height: 1;
   white-space: nowrap;
@@ -156,7 +158,7 @@
   font-size: clamp(10px, 1.2vw, 13px);
   font-weight: 800;
   letter-spacing: 4px;
-  color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -175,8 +177,8 @@
 .splash-since__year {
   font-size: clamp(36px, 5vw, 56px);
   font-weight: 950;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(232, 25, 44, 0.45);
+  color: #ffffff;
+  -webkit-text-stroke: 0;
   letter-spacing: -2px;
   line-height: 1;
 }
@@ -185,7 +187,7 @@
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
   text-transform: uppercase;
   line-height: 1.55;
 }
@@ -224,7 +226,7 @@
 .splash-pct {
   font-size: 11px;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
   letter-spacing: 1px;
   min-width: 32px;
   text-align: right;
