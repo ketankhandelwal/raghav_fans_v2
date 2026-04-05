@@ -18,6 +18,7 @@ import Testimonials from './sections/Testimonials'
 import CatalogSection from './sections/CatalogSection'
 import StudioSection from './sections/StudioSection'
 import NuukInsiders from './sections/NuukInsiders'
+import LocationSection from './sections/LocationSection'
 
 function App() {
   return (
@@ -35,8 +36,9 @@ function App() {
       <CatalogSection />
       <MeetTheFam />
       <Testimonials />
+      <LocationSection />
       <StudioSection />
-      <NuukInsiders />
+      {/* <NuukInsiders /> */}
       <Footer />
     </>
   )

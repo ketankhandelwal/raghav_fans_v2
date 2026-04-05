@@ -319,7 +319,7 @@ export default function SplashScreen({ onDone }) {
       {/* Corners */}
       <span className="splash-corner splash-corner--tl">RAGHAV FANS ®</span>
       <span className="splash-corner splash-corner--tr">EST. 1990</span>
-      <span className="splash-corner splash-corner--bl">CHANDIGARH, INDIA</span>
+      <span className="splash-corner splash-corner--bl">ALIGARH, UTTAR PRADESH</span>
       <span className="splash-corner splash-corner--br">QUALITY · INNOVATION</span>
 
       {/* Lines */}

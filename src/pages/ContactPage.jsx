@@ -129,17 +129,17 @@ const INFO = [
   {
     icon: '📍',
     label: 'Visit Us',
-    value: '42, Industrial Area, Phase II\nChandigarh, India 160002',
+    value: 'Agra Road, Surendra Nagar,\nAligarh-202001, Uttar Pradesh',
   },
   {
     icon: '📞',
     label: 'Call Us',
-    value: '+91 98765 43210\nMon – Sat, 9am – 6pm',
+    value: '+917983881769\nOpen from 10:30 AM to 7:30 PM',
   },
   {
     icon: '✉️',
     label: 'Email Us',
-    value: 'hello@raghavfans.com\nWe reply within 24 hours',
+    value: 'khandelwalgaurang2004@gmail.com\nWe reply within 24 hours',
   },
 ]
 

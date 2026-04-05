@@ -67,7 +67,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <div className="footer-info">
-          RAGHAV Ltd - New Delhi, 110001 India
+          Agra Road, Surendra Nagar, Aligarh-202001, Uttar Pradesh
         </div>
         <div className="footer-legal">
           <a href="#">Privacy Policy</a>
