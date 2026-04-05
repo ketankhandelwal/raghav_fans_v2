@@ -67,7 +67,9 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
-    min-height: 350px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: auto;
+    max-height: none;
   }
 }
