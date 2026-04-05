@@ -10,7 +10,7 @@ function FullWidthBanner({
     <section className="full-width-banner">
       <div className="full-width-banner__overlay">
         <p className="full-width-banner__subtitle">{subtitle}</p>
-        <button className="full-width-banner__btn">{buttonText}</button>
+        {/* <button className="full-width-banner__btn">{buttonText}</button> */}
       </div>
       <img 
         className="full-width-banner__image"

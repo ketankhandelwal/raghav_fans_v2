@@ -27,11 +27,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Add CNAME for custom domain
-        run: echo "raghavfans.com" > dist/CNAME
 
-      - name: Add 404 redirect for SPA routing
-        run: cp dist/index.html dist/404.html
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
