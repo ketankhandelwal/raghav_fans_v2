@@ -61,8 +61,15 @@
 }
 
 @media (max-width: 768px) {
-  .full-width-banner { height: 420px; }
-  .full-width-banner__title { font-size: 32px; }
+  .full-width-banner { height: 360px; }
+  .full-width-banner__title { font-size: 28px; }
   .full-width-banner__subtitle { font-size: 14px; }
-  .full-width-banner__btn { padding: 14px 32px; font-size: 12px; }
+  .full-width-banner__btn { padding: 12px 28px; font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .full-width-banner { height: 280px; }
+  .full-width-banner__subtitle { font-size: 13px; margin-bottom: 20px; }
+  .full-width-banner__btn { padding: 10px 24px; font-size: 11px; }
+  .full-width-banner__overlay { padding: 24px; }
 }

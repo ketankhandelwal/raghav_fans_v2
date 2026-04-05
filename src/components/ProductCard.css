@@ -1,12 +1,45 @@
 .product-card {
-  flex: 0 0 280px;
-  max-width: 280px;
+  flex: 0 0 260px;
+  max-width: 260px;
   display: flex;
   flex-direction: column;
   gap: 4px; /* Tighter gap as seen in SS */
   position: relative;
   padding-bottom: 24px;
   font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    flex: 0 0 220px;
+    max-width: 220px;
+  }
+
+  .product-card__image-wrap {
+    height: 220px;
+  }
+
+  .product-card__name {
+    font-size: 20px;
+  }
+
+  .product-card__subtitle {
+    font-size: 18px;
+  }
+
+  .product-card__tagline {
+    font-size: 13px;
+  }
+
+  .product-card__price {
+    font-size: 22px;
+  }
+
+  .product-card__add-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 10px;
+  }
 }
 
 /* Container for image + badges overlapping */

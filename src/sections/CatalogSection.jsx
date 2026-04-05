@@ -64,6 +64,7 @@ function CatalogCard({ item }) {
   return (
     <div
       ref={cardRef}
+      className="rg-catalog-card"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
@@ -176,7 +177,7 @@ function CatalogCard({ item }) {
       </div>
 
       {/* Visual */}
-      <div style={{
+      <div className="rg-catalog-card-visual" style={{
         width: '240px', height: '240px', flexShrink: 0,
         position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center',
       }}>

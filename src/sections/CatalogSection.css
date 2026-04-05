@@ -167,3 +167,18 @@
   .catalog-title { font-size: 36px; }
   .catalog-image { width: 220px; height: 220px; }
 }
+
+/* Responsive overrides for inline-styled CatalogCard */
+@media (max-width: 580px) {
+  .rg-catalog-card {
+    flex-direction: column !important;
+    padding: 32px 24px 28px !important;
+    align-items: flex-start !important;
+  }
+
+  .rg-catalog-card-visual {
+    width: 160px !important;
+    height: 160px !important;
+    align-self: center;
+  }
+}

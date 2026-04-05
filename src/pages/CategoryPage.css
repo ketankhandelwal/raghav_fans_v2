@@ -83,6 +83,13 @@
 
 @media (max-width: 800px) {
   .cat-page__body { padding: 80px 20px 60px; }
+  .cat-page__title { font-size: 30px; }
+  .cat-page__grid { gap: 24px 16px; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .cat-page__body { padding: 72px 16px 48px; }
+  .cat-page__search { max-width: 100%; }
 }
 
 /* Empty state */

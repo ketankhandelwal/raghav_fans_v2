@@ -443,9 +443,26 @@
 }
 
 @media (max-width: 600px) {
-  .contact-body { padding: 60px 20px 80px; }
+  .contact-body { padding: 48px 16px 64px; }
 
   .cf-row { grid-template-columns: 1fr; }
 
   .contact-hero__title { letter-spacing: -1px; }
+
+  .contact-form-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+
+  .contact-form-card__header h3 {
+    font-size: 26px;
+  }
+
+  .contact-hero__sub {
+    font-size: 15px;
+  }
+
+  .contact-left__heading {
+    font-size: 28px;
+  }
 }

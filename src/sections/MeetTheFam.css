@@ -201,6 +201,76 @@
   }
 }
 
+/* ── Mobile: completely restructure ── */
+@media (max-width: 767px) {
+  .meet-fam-section {
+    height: auto;
+    padding: 40px 0 0;
+    overflow: visible;
+  }
+
+  /* Hide the black bottom bar on mobile */
+  .meet-fam-section::after {
+    display: none;
+  }
+
+  .meet-fam-container {
+    flex-direction: column;
+    padding: 0 20px;
+    height: auto;
+    gap: 0;
+  }
+
+  .meet-fam-left {
+    height: auto;
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .meet-fam-headline {
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+
+  .meet-fam-tabs {
+    margin-bottom: 0;
+    gap: 8px;
+  }
+
+  /* Hide large cutout visuals — they don't fit on mobile */
+  .meet-fam-visuals {
+    display: none;
+  }
+
+  /* Sidebar becomes a full-width card below the left column */
+  .meet-fam-sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    border-radius: 16px 16px 0 0;
+    margin-top: 24px;
+    margin-right: 0;
+    position: relative;
+    z-index: 101;
+  }
+
+  .sidebar-scroll-wrapper {
+    max-height: 340px;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 16px;
+    padding-right: 0;
+    padding-bottom: 8px;
+  }
+
+  /* Make product cards horizontal-scrollable on mobile */
+  .sidebar-scroll-wrapper > * {
+    flex: 0 0 220px;
+  }
+}
+
 .anim-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }

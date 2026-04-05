@@ -186,12 +186,22 @@
 }
 
 @media (max-width: 768px) {
+  .studio-section {
+    margin: 48px 16px;
+    border-radius: 20px;
+  }
+
   .studio-section__content {
     padding: 40px 24px;
   }
 
   .studio-section__headline {
-    font-size: 40px;
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .studio-section__image-wrap {
+    min-height: 280px;
   }
 
   .studio-section__btn,

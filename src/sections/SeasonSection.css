@@ -53,6 +53,13 @@
   }
 
   .section-label {
-    font-size: 24px;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+  }
+
+  .product-scroll-wrapper {
+    gap: 16px;
+    padding: 0 16px 32px;
+    margin: 0 -16px;
   }
 }
