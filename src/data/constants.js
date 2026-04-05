@@ -223,12 +223,6 @@ export const CATEGORIES = [
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/SUMO+FLAME.png',
   },
-    {
-    id: 10,
-    name: 'Series',
-    count: 3,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/1.png',
-  },
  
   {
     id: 6,
@@ -253,6 +247,12 @@ export const CATEGORIES = [
     name: 'Immersion Rod',
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/immersion+cu..png',
+  },
+    {
+    id: 10,
+    name: 'Series',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/1.png',
   },
     {
     id: 1,
@@ -296,7 +296,7 @@ export const IMAGE_BANNERS = [
     bg: '#1a2f5e',
     textColor: '#fff',
     large: false,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_2d11uy2d11uy2d11.png',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_poh9fmpoh9fmpoh9.png',
   },
   {
     id: 3,

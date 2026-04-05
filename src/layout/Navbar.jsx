@@ -12,7 +12,16 @@ function Navbar() {
 
   return (
     <nav className="navbar" onMouseLeave={() => setIsShopOpen(false)}>
-      <a href="#" className="navbar__logo" aria-label="Raghav Fans">
+      <a 
+        href="/" 
+        className="navbar__logo" 
+        aria-label="Raghav Fans"
+        onClick={(e) => {
+          e.preventDefault()
+          navigate('/')
+          window.scrollTo(0, 0)
+        }}
+      >
         <img
           src="https://raghav-fans.s3.ap-southeast-1.amazonaws.com/logo/logo_without_categories.png"
           alt="Raghav Fans"
@@ -32,6 +41,21 @@ function Navbar() {
           onMouseEnter={() => setIsShopOpen(true)}
         >
           SHOP
+        </button>
+        <button 
+          className="navbar__nav-btn"
+          onClick={() => {
+            if (location.pathname !== '/') {
+              navigate('/')
+              setTimeout(() => {
+                document.getElementById('catalogs')?.scrollIntoView({ behavior: 'smooth' })
+              }, 100)
+            } else {
+              document.getElementById('catalogs')?.scrollIntoView({ behavior: 'smooth' })
+            }
+          }}
+        >
+          CATALOGUE
         </button>
         <button
           className={`navbar__nav-btn navbar__nav-btn--contact ${onContact ? 'active' : ''}`}
