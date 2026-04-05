@@ -66,8 +66,7 @@ function Navbar() {
       </div>
       <div className="navbar__icons">
         <button className="navbar__icon-btn" id="btn-search" aria-label="Search"><SearchIcon /></button>
-        <button className="navbar__icon-btn" id="btn-account" aria-label="Account"><UserIcon /></button>
-        <button className="navbar__icon-btn" id="btn-cart" aria-label="Cart"><CartIcon /></button>
+
       </div>
 
       {isShopOpen && <ShopDropdown onClose={() => setIsShopOpen(false)} />}

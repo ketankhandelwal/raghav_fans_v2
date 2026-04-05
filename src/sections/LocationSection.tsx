@@ -8,10 +8,10 @@ const stats = [
 ];
 
 const MAPS_URL =
-    "https://www.google.com/maps/place/27%C2%B054'12.0%22N+78%C2%B005'59.0%22E/@27.9033333,78.0997222,17z/data=!3m1!4b1!4m4!3m3!8m2!3d27.9033333!4d78.0997222?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
+    "https://www.google.com/maps/place/27%C2%B053'05.7%22N+78%C2%B004'18.0%22E/@27.8849214,78.0690864,17z/data=!3m1!4b1!4m4!3m3!8m2!3d27.8849167!4d78.0716667?hl=en&entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
 
 const EMBED_URL =
-    "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3525.955681900625!2d78.0997222!3d27.903333300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDU0JzEyLjAiTiA3OMKwMDUnNTkuMCJF!5e0!3m2!1sen!2sin!4v1775366096118!5m2!1sen!2sin";
+    "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3526.5560303820257!2d78.06908217547367!3d27.884905376081253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDUzJzA1LjciTiA3OMKwMDQnMTguMCJF!5e0!3m2!1sen!2sin!4v1775372179840!5m2!1sen!2sin";
 
 const LocationSection = () => (
     <section className="location-section">
@@ -62,7 +62,7 @@ const LocationSection = () => (
                 <div className="location-info-row">
                     <MapPin size={18} className="location-info-icon" />
                     <p className="location-info-text">
-                        RAGHAV - FAN's | WIRE's | MCB's | APPLIANCES,<br />
+                        SOKHIYA BROTHERS,<br />
                         ALIGARH, Uttar Pradesh
                     </p>
                 </div>

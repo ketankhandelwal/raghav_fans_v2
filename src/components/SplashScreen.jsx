@@ -318,7 +318,7 @@ export default function SplashScreen({ onDone }) {
 
       {/* Corners */}
       <span className="splash-corner splash-corner--tl">RAGHAV FANS ®</span>
-      <span className="splash-corner splash-corner--tr">EST. 1990</span>
+      <span className="splash-corner splash-corner--tr">EST. 2018</span>
       <span className="splash-corner splash-corner--bl">ALIGARH, UTTAR PRADESH</span>
       <span className="splash-corner splash-corner--br">QUALITY · INNOVATION</span>
 
@@ -344,12 +344,12 @@ export default function SplashScreen({ onDone }) {
         <CycleText active={cycleIdx} />
 
         {/* Tagline */}
-        <p className="splash-tagline">COOLING INDIA SINCE 1990</p>
+        <p className="splash-tagline">COOLING INDIA SINCE 2018</p>
       </div>
 
       {/* Since */}
       <div className="splash-since">
-        <span className="splash-since__year">1990</span>
+        <span className="splash-since__year">2018</span>
         <span className="splash-since__label">Years of<br />Excellence</span>
       </div>
 
