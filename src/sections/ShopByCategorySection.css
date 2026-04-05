@@ -63,11 +63,11 @@
 }
 
 .category-card__name {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 42px;
-  font-weight: 950;
-  color: #111;
-  line-height: 1;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: #000;
+  line-height: 0.95;
   letter-spacing: -2px;
   margin-bottom: 12px;
   z-index: 5;
@@ -101,6 +101,33 @@
 .category-card:hover .category-card__image {
   transform: scale(1.08);
 }
+
+.shop-by-section__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.shop-by-section__btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #111;
+  padding: 16px 48px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.shop-by-section__btn:hover {
+  background-color: #c0111f;
+  transform: translateY(-2px);
+}
+
 
 @media (max-width: 1024px) {
   .category-card { flex: 0 0 320px; height: 360px; }

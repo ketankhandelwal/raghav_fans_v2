@@ -197,18 +197,20 @@ export const FAM_TABS_DATA = [
 export const FAM_TABS = ['FANS', 'HOME APPLIANCES', 'SERIES', 'COOLERS', 'SWITCHES & SOCKETS']
 
 export const CATEGORIES = [
-  {
-    id: 1,
-    name: 'Ceiling Fans',
-    count: 7,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/POLO+BROWN.jpg',
-  },
-  {
+    {
     id: 2,
     name: 'Pedestal Fans',
     count: 4,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEDESTAL+FANS/THUNDER.png',
   },
+   {
+    id: 5,
+    name: 'Mixer',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/MAGIC+2.png',
+  },
+
+
   {
     id: 3,
     name: 'Exhaust Fans',
@@ -221,12 +223,13 @@ export const CATEGORIES = [
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/SUMO+FLAME.png',
   },
-  {
-    id: 5,
-    name: 'Mixer',
+    {
+    id: 10,
+    name: 'Series',
     count: 3,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/MAGIC+2.png',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/1.png',
   },
+ 
   {
     id: 6,
     name: 'Iron Press',
@@ -239,11 +242,29 @@ export const CATEGORIES = [
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/WARMER+GAS+GEYSER.png',
   },
+   {
+    id: 12,
+    name: 'Coolers',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/6.1.png',
+  },
+  {
+    id: 13,
+    name: 'Immersion Rod',
+    count: 3,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/immersion+cu..png',
+  },
+    {
+    id: 1,
+    name: 'Ceiling Fans',
+    count: 7,
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/decorative_ceiling_2.png',
+  },
   {
     id: 8,
     name: 'Switches',
     count: 3,
-    image: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/FORTUNE.png",
+    image: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AURIC/8M+SQ.+SHEET.png",
   },
   {
     id: 9,
@@ -251,24 +272,8 @@ export const CATEGORIES = [
     count: 3,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/16A.SOCKET+WITH+SHUTTER.png',
   },
-  {
-    id: 10,
-    name: 'Series',
-    count: 3,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/LEATHER.png',
-  },
-  {
-    id: 11,
-    name: 'USB & TV SOCKETS',
-    count: 3,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/image+(1).png',
-  },
-  {
-    id: 12,
-    name: 'Coolers',
-    count: 3,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/6.1.png',
-  }
+
+ 
 ]
 
 export const IMAGE_BANNERS = [

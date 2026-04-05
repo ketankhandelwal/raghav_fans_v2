@@ -19,9 +19,6 @@ import CatalogSection from './sections/CatalogSection'
 import StudioSection from './sections/StudioSection'
 import NuukInsiders from './sections/NuukInsiders'
 
-// Components
-import FloatingButtons from './components/FloatingButtons'
-
 function App() {
   return (
     <>
@@ -32,14 +29,15 @@ function App() {
       <SeasonSection />
       <FullWidthBanner />
       <ShopByCategorySection />
+      <FullWidthBanner 
+        image="https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/har_pal_switch.png"
+      />
       <CatalogSection />
-      <QuoteSection />
       <MeetTheFam />
       <Testimonials />
       <StudioSection />
       <NuukInsiders />
       <Footer />
-      <FloatingButtons />
     </>
   )
 }

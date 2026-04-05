@@ -2,6 +2,9 @@ import React from 'react'
 import { badgeLabel } from '../data/constants'
 import './ProductCard.css'
 
+const waUrl = (name) =>
+  `https://wa.me/917983881769?text=Hi%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(name)}!`
+
 function ProductCard({ product }) {
   return (
     <div className="product-card" id={`product-${product.id}`}>
@@ -52,9 +55,15 @@ function ProductCard({ product }) {
           {product.priceOld && <div className="product-card__price-old">{product.priceOld}</div>}
           <div className="product-card__price">{product.price}</div>
         </div>
-        <button className="product-card__add-btn" id={`add-to-cart-${product.id}`}>
+        <a
+          href={waUrl(product.name)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="product-card__add-btn"
+          id={`add-to-cart-${product.id}`}
+        >
           ENQUIRE NOW
-        </button>
+        </a>
       </div>
 
       {/* EMI Below Footer Row */}

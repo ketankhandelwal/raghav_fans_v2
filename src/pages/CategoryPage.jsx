@@ -14,7 +14,7 @@ const catalog = {
   'fans': {
     label: 'Ceiling Fans',
     products: [
-      { img: CF+'AERO+IV.png',                    name: 'Aero IV',                   tagline: 'Aerodynamic blade design for superior room air circulation',        tag: 'Best Seller'   },
+      { img: CF+'AERO+IV.png',                    name: 'Aero IV',                   tagline: 'Aerodynamic blade design for superior room SWITCHING',        tag: 'Best Seller'   },
       { img: CF+'ALTO+3B+BROWN.jpg',              name: 'Alto 3B Brown',             tagline: 'Classic 3-blade warm-brown finish for timeless interiors',          tag: 'Classic'       },
       { img: CF+'ALTO+4B+BROWN.jpg',              name: 'Alto 4B Brown',             tagline: 'Enhanced 4-blade design for maximum airflow delivery',              tag: 'Popular'       },
       { img: CF+'BLOOM+BR.png',                   name: 'Bloom BR',                  tagline: 'Bloom-inspired blades with smooth, silent motor performance',       tag: 'New Arrival'   },
