@@ -38,10 +38,7 @@ function StudioSection() {
       </div>
 
       <div className="studio-section__image-wrap">
-        <div className="studio-image-overlay">
-          {/* Added the play icon so your CSS transitions work */}
-           
-        </div>
+
         <img
           src="https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/combine_ss.png"
           alt="RAGHAV FANS Studio Demo"

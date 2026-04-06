@@ -62,25 +62,30 @@
 }
 
 .studio-section__btn {
-  background: #E8271C;
-  color: #fff;
+  background: transparent;
+  color: #fff; /* On dark background */
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
-  padding: 16px 32px;
+  padding: 14px 32px;
   border-radius: 100px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  border: none;
+  border: 1.5px solid #fff;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .studio-section__btn:hover {
   background: #fff;
-  color: #E8271C;
+  color: #111;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(232, 39, 28, 0.2);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.studio-section__btn:active {
+  background: var(--black);
+  color: #fff;
 }
 
 .studio-section__btn-outline {
@@ -128,39 +133,8 @@
   z-index: 1;
 }
 
-.studio-image-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  /* CHANGE THIS to transparent to remove the 'faded' look */
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.4s ease;
-  pointer-events: none;
-}
-
-.play-icon {
-  width: 72px;
-  height: 72px;
-  color: #fff;
-  opacity: 0.85;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s;
-}
-
-.studio-section__image-wrap:hover .studio-image-overlay {
-  background: rgba(0, 0, 0, 0);
-}
-
 .studio-section__image-wrap:hover img {
   transform: scale(1.08);
-}
-
-.studio-section__image-wrap:hover .play-icon {
-  transform: scale(1.15);
-  opacity: 1;
 }
 
 @media (max-width: 1400px) {

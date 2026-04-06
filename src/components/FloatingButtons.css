@@ -26,11 +26,6 @@
   transform: scale(1.1);
 }
 
-.float-btn--video {
-  background: #1a1a1a;
-  color: white;
-  font-size: 18px;
-}
 
 .float-btn--whatsapp {
   background: #25d366;
