@@ -229,7 +229,7 @@ export default function SplashScreen({ onDone }) {
     const iv = setInterval(() => {
       idx = (idx + 1) % LABELS.length
       setCycleIdx(idx)
-    }, 1000)
+    }, 500)
 
     /* ── GSAP master timeline ── */
     const tl = gsap.timeline()
