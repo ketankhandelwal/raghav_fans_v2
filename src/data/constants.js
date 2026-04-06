@@ -200,13 +200,13 @@ export const CATEGORIES = [
     {
     id: 2,
     name: 'Pedestal Fans',
-    count: 4,
+    count: 12,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEDESTAL+FANS/THUNDER.png',
   },
    {
     id: 5,
     name: 'Mixer',
-    count: 3,
+    count: 4,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HOME+APPLIANCES/MAGIC+2.png',
   },
 
@@ -214,13 +214,13 @@ export const CATEGORIES = [
   {
     id: 3,
     name: 'Exhaust Fans',
-    count: 3,
+    count: 2,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/VENTI.png',
   },
   {
     id: 4,
     name: 'Heaters',
-    count: 3,
+    count: 16,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/SUMO+FLAME.png',
   },
  
@@ -239,37 +239,37 @@ export const CATEGORIES = [
    {
     id: 12,
     name: 'Coolers',
-    count: 3,
+    count: 16,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/COOLERS/6.1.png',
   },
   {
     id: 13,
     name: 'Immersion Rod',
-    count: 3,
+    count: 2,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/HEATER/immersion+cu..png',
   },
     {
     id: 10,
     name: 'Series',
-    count: 3,
+    count: 7,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/SERIES/1.png',
   },
     {
     id: 1,
     name: 'Ceiling Fans',
-    count: 7,
+    count: 48,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/ceiling_fans/CEILING+FANS/decorative_ceiling_2.png',
   },
   {
     id: 8,
     name: 'Switches',
-    count: 3,
+    count: 12,
     image: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AURIC/8M+SQ.+SHEET.png",
   },
   {
     id: 9,
     name: 'Socket',
-    count: 3,
+    count: 6,
     image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/PEGASUS/16A.SOCKET+WITH+SHUTTER.png',
   },
 

@@ -14,15 +14,16 @@ function useThreeScene(canvasRef) {
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.setSize(canvas.clientWidth, canvas.clientHeight)
-    renderer.shadowMap.enabled = true
+    // Disabled shadowMap as it's not being used and saves performance
+    renderer.shadowMap.enabled = false 
 
     const scene  = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 100)
     camera.position.set(0, 0.5, 7)
 
     /* ── Lighting ── */
-    scene.add(new THREE.AmbientLight('#ffffff', 0.3))
-    const dirLight = new THREE.DirectionalLight('#ffffff', 1.2)
+    scene.add(new THREE.AmbientLight('#ffffff', 0.5)) // Slightly brighter ambient
+    const dirLight = new THREE.DirectionalLight('#ffffff', 1.5) // Brighter directional
     dirLight.position.set(3, 5, 5)
     scene.add(dirLight)
     const redPoint = new THREE.PointLight('#e8192c', 3, 12)
@@ -33,25 +34,25 @@ function useThreeScene(canvasRef) {
     const fanGroup = new THREE.Group()
     scene.add(fanGroup)
 
-    // Hub
+    // Hub - Changed to polished silver
     const hub = new THREE.Mesh(
       new THREE.CylinderGeometry(0.18, 0.18, 0.22, 32),
-      new THREE.MeshStandardMaterial({ color: '#1a1a1a', metalness: 0.9, roughness: 0.2 })
+      new THREE.MeshStandardMaterial({ color: '#d4d4d4', metalness: 0.9, roughness: 0.1 })
     )
     hub.rotation.x = Math.PI / 2
     fanGroup.add(hub)
 
-    // Center cap
+    // Center cap - Changed to white with red pulse light
     const cap = new THREE.Mesh(
       new THREE.SphereGeometry(0.15, 32, 32),
-      new THREE.MeshStandardMaterial({ color: '#e8192c', metalness: 0.8, roughness: 0.15 })
+      new THREE.MeshStandardMaterial({ color: '#ffffff', metalness: 0.6, roughness: 0.2 })
     )
     fanGroup.add(cap)
 
-    // 3 Blades
+    // 3 Blades - Changed to white
     const bladeCount = 3
     const bladeMat = new THREE.MeshStandardMaterial({
-      color: '#1a1a1a', metalness: 0.7, roughness: 0.3, side: THREE.DoubleSide,
+      color: '#ffffff', metalness: 0.2, roughness: 0.5, side: THREE.DoubleSide,
     })
 
     for (let i = 0; i < bladeCount; i++) {
@@ -77,9 +78,17 @@ function useThreeScene(canvasRef) {
     fanGroup2.position.set(-3.2, -0.5, -1.5)
     fanGroup2.rotation.y = 0.4
     fanGroup2.scale.setScalar(0.55)
-    // tint blades slightly
+    
+    // We need to clone the material again because clone() only shallow copies.
+    // If we want different tints, we must clone the material separately.
     fanGroup2.children.forEach(c => {
-      if (c.material) c.material = c.material.clone()
+        if (c.material) {
+            c.material = c.material.clone()
+            // Make the smaller fan slightly grey to differentiate
+            if(c.material.color.getHexString() === 'ffffff') {
+                c.material.color.set('#cccccc'); 
+            }
+        }
     })
     scene.add(fanGroup2)
 
@@ -153,7 +162,7 @@ function useThreeScene(canvasRef) {
       fanGroup.position.y  = 0.2 + Math.sin(t * 0.6) * 0.06
       fanGroup2.position.y = -0.5 + Math.sin(t * 0.5 + 1) * 0.04
 
-      // Red point light pulses
+      // Red point light pulses (This now hits the white hub/cap)
       redPoint.intensity = 2.5 + Math.sin(t * 2.2) * 0.8
 
       r1.rotation.z =  t * 0.14
@@ -182,21 +191,6 @@ function useThreeScene(canvasRef) {
   }, [])
 }
 
-/* ── Letter splitter ── */
-function SplitLetters({ text, dataAttr }) {
-  return (
-    <span className="splash-word-inner" aria-label={text}>
-      {text.split('').map((ch, i) => (
-        <span key={i} className="splash-char" data-char={dataAttr}
-          style={{ display: 'inline-block', overflow: 'hidden', verticalAlign: 'bottom' }}>
-          <span className="splash-char-inner" style={{ display: 'inline-block' }}>
-            {ch === ' ' ? '\u00A0' : ch}
-          </span>
-        </span>
-      ))}
-    </span>
-  )
-}
 
 /* ── Cycling sub-text ── */
 const LABELS = ["FAN's", "WIRE's", "MCB's", "Home Appliances"]
@@ -233,12 +227,13 @@ export default function SplashScreen({ onDone }) {
 
     /* ── GSAP master timeline ── */
     const tl = gsap.timeline()
+    let pulsateTl; // Define the pulsate timeline variable
 
     gsap.set('.splash-line-top, .splash-line-bottom', { scaleX: 0, transformOrigin: 'left center' })
-    gsap.set('.splash-char-inner', { y: '115%' })
+    // Initial state for pulsate effect: invisible and scaled down
+    gsap.set('.splash-center', { opacity: 0, scale: 0.8 }) 
     gsap.set('.splash-tagline', { opacity: 0, y: 18, letterSpacing: '14px' })
     gsap.set('.splash-since', { opacity: 0, x: -20 })
-    gsap.set('.splash-logo-dot', { scale: 0, opacity: 0 })
     gsap.set('.splash-progress-track', { opacity: 0, scaleX: 0, transformOrigin: 'left center' })
     gsap.set('.splash-pct', { opacity: 0 })
     gsap.set('.splash-corner', { opacity: 0 })
@@ -250,13 +245,22 @@ export default function SplashScreen({ onDone }) {
       scaleX: 1, duration: 0.75, ease: 'power4.inOut', stagger: 0.1,
     }, 0.1)
 
-    /* red dot */
-    .to('.splash-logo-dot', { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(2.8)' }, 0.55)
-
-    /* RAGHAV letters up */
-    .to('[data-char="raghav"] .splash-char-inner', {
-      y: '0%', duration: 0.95, ease: 'power4.out', stagger: 0.065,
+    /* Main Center Group appear */
+    .to('.splash-center', {
+      opacity: 1, scale: 1, duration: 1.0, ease: 'back.out(1.7)'
     }, 0.5)
+    
+    // START: PULSATE EFFECT (COMING & DISAPPEARING)
+    .add(() => {
+        // Create a separate, repeating timeline for the pulsation
+        pulsateTl = gsap.timeline({ repeat: -1, defaults: { ease: 'sine.inOut' } });
+        pulsateTl
+          // Out (Dissapear)
+          .to('.splash-center', { scale: 1.05, opacity: 0.1, duration: 1.5 })
+          // In (Come)
+          .to('.splash-center', { scale: 1, opacity: 1, duration: 1.0 });
+    }, '-=0.2') // Start just before the entrance finishes
+    // END: PULSATE EFFECT
 
     /* divider line */
     .to('.splash-divider', { scaleX: 1, opacity: 1, duration: 0.5, ease: 'power3.out' }, 1.0)
@@ -277,26 +281,27 @@ export default function SplashScreen({ onDone }) {
     .to('.splash-progress-track', { opacity: 1, scaleX: 1, duration: 0.45, ease: 'power2.out' }, 1.5)
     .to('.splash-pct', { opacity: 1, duration: 0.3 }, 1.7)
 
-    /* counter */
+    /* counter (Reduced duration based on previous suggestion) */
     const counter = { val: 0 }
     tl.to(counter, {
-      val: 100, duration: 4.5, ease: 'power1.inOut',
+      val: 100, duration: 2.0, ease: 'power1.inOut',
       onUpdate() { setPct(Math.round(counter.val)) },
     }, 1.5)
 
     /* hold */
-    tl.to({}, { duration: 1.5 })
+    tl.to({}, { duration: 1.0 })
 
     /* ── EXIT ── */
-    tl.to('.splash-tagline, .splash-since, .splash-corner, .splash-pct, .splash-progress-track, .splash-divider, .splash-cycle-wrap', {
+    // Stop the pulsation immediately before starting exit
+    .add(() => pulsateTl.kill()) 
+    
+    .to('.splash-tagline, .splash-since, .splash-corner, .splash-pct, .splash-progress-track, .splash-divider, .splash-cycle-wrap', {
       opacity: 0, duration: 0.38, ease: 'power2.in',
     })
 
-    .to('[data-char="raghav"] .splash-char-inner', {
-      y: '-115%', duration: 0.6, ease: 'power3.in', stagger: { each: 0.055, from: 'end' },
+    .to('.splash-center', {
+      y: -30, opacity: 0, scale: 0.9, duration: 0.6, ease: 'power3.in'
     }, '<0.05')
-
-    .to('.splash-logo-dot', { scale: 0, opacity: 0, duration: 0.28, ease: 'power2.in' }, '<0.1')
 
     .to('.splash-line-top, .splash-line-bottom', {
       scaleX: 0, transformOrigin: 'right center', duration: 0.52, ease: 'power4.inOut', stagger: 0.07,
@@ -309,7 +314,11 @@ export default function SplashScreen({ onDone }) {
       onComplete: () => { clearInterval(iv); onDone() },
     })
 
-    return () => { tl.kill(); clearInterval(iv) }
+    return () => { 
+        tl.kill(); 
+        if(pulsateTl) pulsateTl.kill(); // Ensure pulsation is cleaned up
+        clearInterval(iv) 
+    }
   }, [onDone])
 
   return (
@@ -326,15 +335,16 @@ export default function SplashScreen({ onDone }) {
       <div className="splash-line-top" />
       <div className="splash-line-bottom" />
 
-      {/* ── Center ── */}
+      {/* ── Center ── (Pulsation applied to this container) */}
       <div className="splash-center">
 
-        {/* RAGHAV + red dot */}
+        {/* Logo Image */}
         <div className="splash-logo-row">
-          <h1 className="splash-word splash-word--raghav">
-            <SplitLetters text="RAGHAV" dataAttr="raghav" />
-          </h1>
-          <span className="splash-logo-dot" />
+          <img 
+            src="https://raghav-fans.s3.ap-southeast-1.amazonaws.com/logo/logo_white_with_categories-removebg-preview.png" 
+            alt="Raghav Fans" 
+            className="splash-logo-img" 
+          />
         </div>
 
         {/* Divider */}
