@@ -14,7 +14,7 @@ const EMBED_URL =
     "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3526.5560303820257!2d78.06908217547367!3d27.884905376081253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDUzJzA1LjciTiA3OMKwMDQnMTguMCJF!5e0!3m2!1sen!2sin!4v1775372179840!5m2!1sen!2sin";
 
 const LocationSection = () => (
-    <section className="location-section">
+    <section className="location-section" id="location">
         {/* Stats Bar */}
         <div className="location-stats">
             {stats.map((stat, i) => (

@@ -162,7 +162,7 @@ export default function Testimonials() {
   }, [])
 
   return (
-    <section className="ts2-section">
+    <section className="ts2-section" id="testimonials">
 
       {/* ── decorative large cursive bg text ── */}
       <div className="ts2-bg-word" aria-hidden>Reviews</div>

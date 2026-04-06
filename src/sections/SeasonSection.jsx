@@ -5,7 +5,7 @@ import './SeasonSection.css'
 
 function SeasonSection() {
   return (
-    <section id="shop" className="season-section">
+    <section id="season" className="season-section">
       <h2 className="section-label">Bestsellers this season</h2>
       <div className="product-scroll-wrapper">
         {PRODUCTS.map((p) => (

@@ -73,15 +73,21 @@
 
 .product-img-hover {
   opacity: 0;
+  z-index: 2;
 }
 
-.product-card:hover .product-img-base {
+.product-card--has-hover:hover .product-img-base {
   opacity: 0;
 }
 
-.product-card:hover .product-img-hover {
+.product-card--has-hover:hover .product-img-hover {
   opacity: 1;
   transform: scale(1.05);
+}
+
+/* Fallback hover effect for cards with only one image */
+.product-card:not(.product-card--has-hover):hover .product-img-base {
+  transform: scale(1.06) rotate(1deg);
 }
 
 /* Badges positioned on top right */

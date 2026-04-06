@@ -6,8 +6,10 @@ const waUrl = (name) =>
   `https://wa.me/917983881769?text=Hi%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(name)}!`
 
 function ProductCard({ product }) {
+  const hasHover = !!product.imageHover
+
   return (
-    <div className="product-card" id={`product-${product.id}`}>
+    <div className={`product-card ${hasHover ? 'product-card--has-hover' : ''}`} id={`product-${product.id}`}>
       {/* Product Image & Badges */}
       <div className="product-card__image-container">
         <div className="product-card__image-wrap">
