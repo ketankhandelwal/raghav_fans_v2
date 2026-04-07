@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import './Hero.css'
 
 const carouselItems = [
-  { type: 'video', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/fan_video.mp4" },
+  { type: 'video', src: "/fan_video.mp4" },
   { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/appliances_range.png" },
   { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/fan_range.png" },
     { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/cooler_range.png" },

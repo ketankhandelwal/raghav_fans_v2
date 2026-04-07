@@ -272,7 +272,7 @@ function Navbar() {
             </div>
           )}
 
-          <button className="navbar__mobile-btn" onClick={goToCatalogue}>
+          <button className="navbar__mobile-btn" onClick={() => scrollToSection('catalogs')}>
             CATALOGUE
           </button>
           <button
