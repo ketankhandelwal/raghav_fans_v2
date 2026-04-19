@@ -286,7 +286,7 @@ export const IMAGE_BANNERS = [
     textColor: '#fff',
     large: true,
     logo: 'R',
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_ulgzpqulgzpqulgz.png',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_isf19bisf19bisf1.png',
   },
   {
     id: 2,
@@ -296,7 +296,7 @@ export const IMAGE_BANNERS = [
     bg: '#1a2f5e',
     textColor: '#fff',
     large: false,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_poh9fmpoh9fmpoh9.png',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_lnmlhwlnmlhwlnml.png',
   },
   {
     id: 3,
@@ -306,7 +306,7 @@ export const IMAGE_BANNERS = [
     bg: '#f5c842',
     textColor: '#1a1a1a',
     large: false,
-    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_bpg841bpg841bpg8.png',
+    image: 'https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_xhkv8wxhkv8wxhkv.png',
   },
   {
     id: 4,

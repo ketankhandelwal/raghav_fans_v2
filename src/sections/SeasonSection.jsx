@@ -9,7 +9,7 @@ function SeasonSection() {
       <h2 className="section-label">Bestsellers this season</h2>
       <div className="product-scroll-wrapper">
         {PRODUCTS.map((p) => (
-          <ProductCard key={p.id} product={p} />
+          <ProductCard key={p.id} product={p} showPrice={false} />
         ))}
       </div>
     </section>

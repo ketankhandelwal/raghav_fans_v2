@@ -5,7 +5,7 @@ import './ProductCard.css'
 const waUrl = (name) =>
   `https://wa.me/917983881769?text=Hi%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(name)}!`
 
-function ProductCard({ product }) {
+function ProductCard({ product, showPrice = true }) {
   const hasHover = !!product.imageHover
 
   return (
@@ -53,10 +53,12 @@ function ProductCard({ product }) {
 
       {/* Pricing & CTA Row */}
       <div className="product-card__footer">
-        <div className="product-card__pricing">
-          {product.priceOld && <div className="product-card__price-old">{product.priceOld}</div>}
-          <div className="product-card__price">{product.price}</div>
-        </div>
+        {showPrice && (
+          <div className="product-card__pricing">
+            {product.priceOld && <div className="product-card__price-old">{product.priceOld}</div>}
+            <div className="product-card__price">{product.price}</div>
+          </div>
+        )}
         <a
           href={waUrl(product.name)}
           target="_blank"
@@ -69,7 +71,7 @@ function ProductCard({ product }) {
       </div>
 
       {/* EMI Below Footer Row */}
-      {product.emi && (
+      {showPrice && product.emi && (
         <div className="product-card__emi">
           {product.emi}
           <span className="emi-tag-pill">Buy on EMI ▶</span>
