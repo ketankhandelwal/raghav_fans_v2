@@ -3,7 +3,8 @@ import './Hero.css'
 
 const carouselItems = [
   { type: 'video', src: "/fan_video.mp4" },
-  { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/appliances_range.png" },
+  {type: "image", src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/WEBSITE+IMAGE.jpg.jpeg"},
+  {type: "image", src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/pilot.png"},
   { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/fan_range.png" },
     { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/cooler_range.png" },
 
