@@ -2,7 +2,7 @@ import React from 'react'
 import './FullWidthBanner.css'
 
 function FullWidthBanner({ 
-  image = "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/switches_range.png",
+  image = "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_qc7dc3qc7dc3qc7d.png",
   subtitle = "Experience the next generation of SWITCHING.",
   buttonText = "Explore the Collection"
 }) {
