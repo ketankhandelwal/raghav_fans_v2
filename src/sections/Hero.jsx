@@ -7,7 +7,7 @@ const carouselItems = [
   {type: "image", src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/pilot.png"},
     { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/COOLER.jpg.jpeg" },
 
-  { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/Gemini_Generated_Image_7tsn6p7tsn6p7tsn.png" }
+  { type: 'image', src: "https://raghav-fans.s3.ap-southeast-1.amazonaws.com/AI+Images/AB+THAND+CHOO+MANTAR.jpg.jpeg" }
 ]
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)

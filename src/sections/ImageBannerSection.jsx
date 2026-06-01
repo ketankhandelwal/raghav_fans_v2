@@ -7,7 +7,7 @@ function ImageBannerSection() {
 
   return (
     <section id="brands" className="ib-section">
-      <h2 className="ib-section__title">Discover Our Brands</h2>
+      <h2 className="ib-section__title">Discover Our Products</h2>
 
       {/* Top Row: 3/4 + 1/4 */}
       <div className="ib-top-row">
